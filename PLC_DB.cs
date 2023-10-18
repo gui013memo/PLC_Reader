@@ -8,8 +8,10 @@ namespace EngineNum_match_validator
 {
     public class PLC_DB
     {
-        public string DataBlock { get; set; }
+        public string DBAdress { get; set; }
         public string Content { get; set; }
+        public string Type { get; set; }
+        public string Purpose { get; set; }
 
     }
 }

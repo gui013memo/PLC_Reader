@@ -223,7 +223,7 @@ namespace EngineNum_match_validator
                 //}
             }
 
-            textBox1.Text = message;
+            //textBox1.Text = message;
         }
 
         private void bt_StartTimer_Click(object sender, EventArgs e)
@@ -232,7 +232,7 @@ namespace EngineNum_match_validator
             MyTimer.Start();
             my_logger.Log("Timer started");
             //MessageBox.Show("Timer started");
-            textBox1.Text = "TIMER STARTED!";
+            //textBox1.Text = "TIMER STARTED!";
         }
 
         private void bt_StopTimer_Click(object sender, EventArgs e)
@@ -240,7 +240,7 @@ namespace EngineNum_match_validator
             MyTimer.Stop();
             my_logger.Log("Timer stopped");
             //  MessageBox.Show("Timer stopped");
-            textBox1.Text = "TIMER STOPPED!";
+            //textBox1.Text = "TIMER STOPPED!";
         }
 
         private void Form1_Load(object sender, EventArgs e)
