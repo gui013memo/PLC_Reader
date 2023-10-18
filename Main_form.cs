@@ -12,8 +12,8 @@ namespace EngineNum_match_validator
     {
         Logger my_logger = new Logger();
 
-        //Plc PLC_M1 = new Plc(CpuType.S7300, "172.16.1.51", 0, 2); //MY PC IP ADDRESS: 140.100.101.9 
-        Plc PLC_M1 = new Plc(CpuType.S7300, "140.100.101.1", 0, 2); //MY PC IP ADDRESS: 140.100.101.9 
+        Plc PLC_M1 = new Plc(CpuType.S7300, "172.16.1.51", 0, 2); //MY PC IP ADDRESS: 140.100.101.9 
+        //Plc PLC_M1 = new Plc(CpuType.S7300, "140.100.101.1", 0, 2); //MY PC IP ADDRESS: 140.100.101.9 
         //Plc PLC_M1 = new Plc(CpuType.S7300, "172.16.30.51", 0, 2); //MY PC IP ADDRESS: 140.100.101.9 
 
         //Plc PLC_M1 = new Plc(CpuType.S7300, "172.16.30.51", 0, 2);
@@ -30,7 +30,7 @@ namespace EngineNum_match_validator
 
         public Main_form()
         {
-            //PLC_DBs = GetData();
+            PLC_DBs = GetData();
 
             InitializeComponent();
 
@@ -38,31 +38,32 @@ namespace EngineNum_match_validator
             my_logger.Log("Eng_No Opened!");
         }
 
-        //private List<PLC_DB>? GetData()
-        //{
-        //    var list = new List<PLC_DB>();
-        //    list.Add(new PLC_DB() { Content = "1", DataBlock = " DB180.DBB0 - Heartbit-TMS" });
-        //    list.Add(new PLC_DB() { Content = " ", DataBlock = " NOT USED " });
-        //    list.Add(new PLC_DB() { Content = "0", DataBlock = " Read Request " });
-        //    list.Add(new PLC_DB() { Content = " ", DataBlock = 4 });
-        //    list.Add(new PLC_DB() { Content = "B", DataBlock = 5 });
-        //    list.Add(new PLC_DB() { Content = "B", DataBlock = 6 });
-        //    list.Add(new PLC_DB() { Content = "4", DataBlock = 7 });
-        //    list.Add(new PLC_DB() { Content = "1", DataBlock = 8 });
-        //    list.Add(new PLC_DB() { Content = "F", DataBlock = 9 });
-        //    list.Add(new PLC_DB() { Content = "3", DataBlock = 10 });
-        //    list.Add(new PLC_DB() { Content = "L", DataBlock = 11 });
-        //    list.Add(new PLC_DB() { Content = "A", DataBlock = 12 });
-        //    list.Add(new PLC_DB() { Content = "P", DataBlock = 13 });
-        //    list.Add(new PLC_DB() { Content = "L", DataBlock = 14 });
-        //    list.Add(new PLC_DB() { Content = "1", DataBlock = 15 });
-        //    list.Add(new PLC_DB() { Content = "1", DataBlock = 16 });
-        //    list.Add(new PLC_DB() { Content = "1", DataBlock = 17 });
-        //    list.Add(new PLC_DB() { Content = "4", DataBlock = 18 });
-        //    list.Add(new PLC_DB() { Content = "2", DataBlock = 19 });
-        //    list.Add(new PLC_DB() { Content = "8", DataBlock = 20 });
-
-        //}
+        public static List<PLC_DB>? GetData()
+        {
+            var list = new List<PLC_DB>();
+            list.Add(new PLC_DB() { DBAdress = "180.0", Content = "1", Type = "ASCII", Purpose = "Heartbit-TMS" });
+            list.Add(new PLC_DB() { DBAdress = "180.1", Content = "B", Type = "ASCII", Purpose = "Block or Head" });
+            list.Add(new PLC_DB() { DBAdress = "180.2", Content = "0", Type = "ASCII", Purpose = "Read Request" });
+            list.Add(new PLC_DB() { DBAdress = "180.5", Content = "0", Type = "ASCII", Purpose = "Work complete" });
+            list.Add(new PLC_DB() { DBAdress = "180.6", Content = "1", Type = "ASCII", Purpose = "Work result" });
+            list.Add(new PLC_DB() { DBAdress = "180.10", Content = "B", Type = "ASCII", Purpose = "ENGINE NO.01" });
+            list.Add(new PLC_DB() { DBAdress = "180.11", Content = "B", Type = "ASCII", Purpose = "ENGINE NO.02" });
+            list.Add(new PLC_DB() { DBAdress = "180.12", Content = "4", Type = "ASCII", Purpose = "ENGINE NO.03" });
+            list.Add(new PLC_DB() { DBAdress = "180.13", Content = "1", Type = "ASCII", Purpose = "ENGINE NO.04" });
+            list.Add(new PLC_DB() { DBAdress = "180.14", Content = "F", Type = "ASCII", Purpose = "ENGINE NO.05" });
+            list.Add(new PLC_DB() { DBAdress = "180.15", Content = "3", Type = "ASCII", Purpose = "ENGINE NO.06" });
+            list.Add(new PLC_DB() { DBAdress = "180.16", Content = "L", Type = "ASCII", Purpose = "ENGINE NO.07" });
+            list.Add(new PLC_DB() { DBAdress = "180.17", Content = "A", Type = "ASCII", Purpose = "ENGINE NO.08" });
+            list.Add(new PLC_DB() { DBAdress = "180.18", Content = "P", Type = "ASCII", Purpose = "ENGINE NO.09" });
+            list.Add(new PLC_DB() { DBAdress = "180.19", Content = "L", Type = "ASCII", Purpose = "ENGINE NO.10" });
+            list.Add(new PLC_DB() { DBAdress = "180.20", Content = "1", Type = "ASCII", Purpose = "ENGINE NO.11" });
+            list.Add(new PLC_DB() { DBAdress = "180.21", Content = "1", Type = "ASCII", Purpose = "ENGINE NO.12" });
+            list.Add(new PLC_DB() { DBAdress = "180.22", Content = "0", Type = "ASCII", Purpose = "ENGINE NO.13" });
+            list.Add(new PLC_DB() { DBAdress = "180.23", Content = "2", Type = "ASCII", Purpose = "ENGINE NO.14" });
+            list.Add(new PLC_DB() { DBAdress = "180.24", Content = "9", Type = "ASCII", Purpose = "ENGINE NO.15" });
+            list.Add(new PLC_DB() { DBAdress = "180.25", Content = "8", Type = "ASCII", Purpose = "ENGINE NO.16" });
+            return list;
+        }
 
 
         //private string Sql_query(string query)
@@ -245,6 +246,8 @@ namespace EngineNum_match_validator
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            var plc_dbs = this.PLC_DBs;
+            DGW_Main.DataSource = plc_dbs;
 
         }
 
