@@ -41,11 +41,11 @@ namespace EngineNum_match_validator
         public static List<PLC_DB>? GetData()
         {
             var list = new List<PLC_DB>();
-            list.Add(new PLC_DB() { DBAdress = "180.0", Content = "1", Type = "ASCII", Purpose = "Heartbit-TMS" });
-            list.Add(new PLC_DB() { DBAdress = "180.1", Content = "B", Type = "ASCII", Purpose = "Block or Head" });
-            list.Add(new PLC_DB() { DBAdress = "180.2", Content = "0", Type = "ASCII", Purpose = "Read Request" });
-            list.Add(new PLC_DB() { DBAdress = "180.5", Content = "0", Type = "ASCII", Purpose = "Work complete" });
-            list.Add(new PLC_DB() { DBAdress = "180.6", Content = "1", Type = "ASCII", Purpose = "Work result" });
+            list.Add(new PLC_DB() { DBAdress = "180.00", Content = "1", Type = "ASCII", Purpose = "Heartbit-TMS" });
+            list.Add(new PLC_DB() { DBAdress = "180.01", Content = "B", Type = "ASCII", Purpose = "Block or Head" });
+            list.Add(new PLC_DB() { DBAdress = "180.02", Content = "0", Type = "ASCII", Purpose = "Read Request" });
+            list.Add(new PLC_DB() { DBAdress = "180.05", Content = "0", Type = "ASCII", Purpose = "Work complete" });
+            list.Add(new PLC_DB() { DBAdress = "180.06", Content = "1", Type = "ASCII", Purpose = "Work result" });
             list.Add(new PLC_DB() { DBAdress = "180.10", Content = "B", Type = "ASCII", Purpose = "ENGINE NO.01" });
             list.Add(new PLC_DB() { DBAdress = "180.11", Content = "B", Type = "ASCII", Purpose = "ENGINE NO.02" });
             list.Add(new PLC_DB() { DBAdress = "180.12", Content = "4", Type = "ASCII", Purpose = "ENGINE NO.03" });
@@ -175,18 +175,18 @@ namespace EngineNum_match_validator
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PLC_M1.Open();
+            //PLC_M1.Open();
 
-            if (PLC_M1.IsConnected == true)
-            {
-                //MessageBox.Show("PLC CONNECTED!");
-                label1.BackColor = Color.Green;
-            }
-            else
-            {
-                MessageBox.Show("FAIL!");
-                label1.BackColor = Color.Red;
-            }
+            //if (PLC_M1.IsConnected == true)
+            //{
+            //    //MessageBox.Show("PLC CONNECTED!");
+            //    label1.BackColor = Color.Green;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("FAIL!");
+            //    label1.BackColor = Color.Red;
+            //}
 
         }
 
