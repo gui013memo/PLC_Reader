@@ -31,11 +31,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             button1 = new Button();
             Button_ConnectPLC = new Button();
             Button_DisconnectPLC = new Button();
@@ -53,9 +54,11 @@
             label2 = new Label();
             label3 = new Label();
             button2 = new Button();
+            panel2 = new Panel();
             ((System.ComponentModel.ISupportInitialize)DGW_Main).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pLCDBBindingSource).BeginInit();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // button1
@@ -66,11 +69,11 @@
             button1.FlatAppearance.BorderColor = Color.FromArgb(140, 140, 140);
             button1.FlatAppearance.BorderSize = 3;
             button1.FlatAppearance.MouseDownBackColor = Color.Black;
-            button1.FlatAppearance.MouseOverBackColor = Color.MediumSeaGreen;
+            button1.FlatAppearance.MouseOverBackColor = Color.LightSlateGray;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = Color.Gainsboro;
-            button1.Location = new Point(36, 456);
+            button1.Location = new Point(36, 96);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(218, 53);
@@ -151,38 +154,38 @@
             DGW_Main.BackgroundColor = Color.DimGray;
             DGW_Main.BorderStyle = BorderStyle.None;
             DGW_Main.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = Color.DimGray;
-            dataGridViewCellStyle11.Font = new Font("Microsoft Tai Le", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle11.ForeColor = Color.Gainsboro;
-            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
-            DGW_Main.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.DimGray;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Tai Le", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            DGW_Main.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             DGW_Main.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DGW_Main.Columns.AddRange(new DataGridViewColumn[] { dBAdressDataGridViewTextBoxColumn, contentDataGridViewTextBoxColumn, typeDataGridViewTextBoxColumn, purposeDataGridViewTextBoxColumn });
             DGW_Main.DataSource = pLCDBBindingSource;
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = SystemColors.ControlLightLight;
-            dataGridViewCellStyle14.Font = new Font("Microsoft Tai Le", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle14.ForeColor = SystemColors.MenuHighlight;
-            dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
-            DGW_Main.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle5.Font = new Font("Microsoft Tai Le", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.MenuHighlight;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            DGW_Main.DefaultCellStyle = dataGridViewCellStyle5;
             DGW_Main.EnableHeadersVisualStyles = false;
             DGW_Main.GridColor = SystemColors.ButtonFace;
-            DGW_Main.Location = new Point(292, 0);
+            DGW_Main.Location = new Point(293, -1);
             DGW_Main.Name = "DGW_Main";
             DGW_Main.ReadOnly = true;
-            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = Color.DimGray;
-            dataGridViewCellStyle15.Font = new Font("Microsoft Tai Le", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle15.ForeColor = Color.Firebrick;
-            dataGridViewCellStyle15.SelectionBackColor = Color.Firebrick;
-            dataGridViewCellStyle15.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.True;
-            DGW_Main.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = Color.DimGray;
+            dataGridViewCellStyle6.Font = new Font("Microsoft Tai Le", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = Color.Firebrick;
+            dataGridViewCellStyle6.SelectionBackColor = Color.Firebrick;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            DGW_Main.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             DGW_Main.RowHeadersWidth = 51;
             DGW_Main.RowTemplate.DefaultCellStyle.BackColor = Color.DimGray;
             DGW_Main.RowTemplate.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
@@ -196,8 +199,8 @@
             // dBAdressDataGridViewTextBoxColumn
             // 
             dBAdressDataGridViewTextBoxColumn.DataPropertyName = "DBAdress";
-            dataGridViewCellStyle12.BackColor = Color.Gray;
-            dBAdressDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.BackColor = Color.Gray;
+            dBAdressDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             dBAdressDataGridViewTextBoxColumn.FillWeight = 6F;
             dBAdressDataGridViewTextBoxColumn.HeaderText = "DBAdress";
             dBAdressDataGridViewTextBoxColumn.MaxInputLength = 6;
@@ -205,16 +208,18 @@
             dBAdressDataGridViewTextBoxColumn.Name = "dBAdressDataGridViewTextBoxColumn";
             dBAdressDataGridViewTextBoxColumn.ReadOnly = true;
             dBAdressDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
-            dBAdressDataGridViewTextBoxColumn.Width = 80;
+            dBAdressDataGridViewTextBoxColumn.Width = 90;
             // 
             // contentDataGridViewTextBoxColumn
             // 
             contentDataGridViewTextBoxColumn.DataPropertyName = "Content";
-            contentDataGridViewTextBoxColumn.HeaderText = "Content";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopCenter;
+            contentDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            contentDataGridViewTextBoxColumn.HeaderText = "   Content";
             contentDataGridViewTextBoxColumn.MinimumWidth = 6;
             contentDataGridViewTextBoxColumn.Name = "contentDataGridViewTextBoxColumn";
             contentDataGridViewTextBoxColumn.ReadOnly = true;
-            contentDataGridViewTextBoxColumn.Width = 125;
+            contentDataGridViewTextBoxColumn.Width = 120;
             // 
             // typeDataGridViewTextBoxColumn
             // 
@@ -228,8 +233,8 @@
             // purposeDataGridViewTextBoxColumn
             // 
             purposeDataGridViewTextBoxColumn.DataPropertyName = "Purpose";
-            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            purposeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            purposeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             purposeDataGridViewTextBoxColumn.HeaderText = "Purpose";
             purposeDataGridViewTextBoxColumn.MinimumWidth = 6;
             purposeDataGridViewTextBoxColumn.Name = "purposeDataGridViewTextBoxColumn";
@@ -261,9 +266,9 @@
             panel1.Controls.Add(Button_DisconnectPLC);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(Button_ConnectPLC);
-            panel1.Location = new Point(-1, 1);
+            panel1.Location = new Point(0, -1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(296, 352);
+            panel1.Size = new Size(296, 353);
             panel1.TabIndex = 6;
             // 
             // Label_PLC_Conn
@@ -293,7 +298,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Source Sans Pro", 20F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.Gainsboro;
-            label3.Location = new Point(16, 380);
+            label3.Location = new Point(16, 21);
             label3.Name = "label3";
             label3.Size = new Size(159, 42);
             label3.TabIndex = 6;
@@ -306,12 +311,12 @@
             button2.Cursor = Cursors.Cross;
             button2.FlatAppearance.BorderColor = Color.FromArgb(140, 140, 140);
             button2.FlatAppearance.BorderSize = 3;
-            button2.FlatAppearance.MouseDownBackColor = Color.Cyan;
-            button2.FlatAppearance.MouseOverBackColor = Color.MediumSeaGreen;
+            button2.FlatAppearance.MouseDownBackColor = Color.Black;
+            button2.FlatAppearance.MouseOverBackColor = Color.LightSlateGray;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.Gainsboro;
-            button2.Location = new Point(36, 533);
+            button2.Location = new Point(36, 169);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(218, 53);
@@ -319,17 +324,27 @@
             button2.Text = "Q_QUALITY_SEND_IF";
             button2.UseVisualStyleBackColor = false;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(64, 64, 64);
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(button2);
+            panel2.Location = new Point(-1, 350);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(296, 361);
+            panel2.TabIndex = 7;
+            // 
             // Main_form
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(757, 631);
-            Controls.Add(button2);
-            Controls.Add(label3);
-            Controls.Add(DGW_Main);
-            Controls.Add(button1);
+            ClientSize = new Size(757, 638);
+            Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(DGW_Main);
             Font = new Font("Microsoft Tai Le", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = SystemColors.MenuHighlight;
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -341,8 +356,9 @@
             ((System.ComponentModel.ISupportInitialize)pLCDBBindingSource).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -361,11 +377,12 @@
         private Panel panel1;
         private Label Label_PLC_Conn;
         private Label label2;
+        private Label label3;
+        private Button button2;
+        private Panel panel2;
         private DataGridViewTextBoxColumn dBAdressDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn contentDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn purposeDataGridViewTextBoxColumn;
-        private Label label3;
-        private Button button2;
     }
 }
