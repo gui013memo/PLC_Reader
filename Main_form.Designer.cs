@@ -55,6 +55,8 @@
             label3 = new Label();
             button2 = new Button();
             panel2 = new Panel();
+            progressBar1 = new ProgressBar();
+            menuStrip1 = new MenuStrip();
             ((System.ComponentModel.ISupportInitialize)DGW_Main).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pLCDBBindingSource).BeginInit();
             panel1.SuspendLayout();
@@ -174,8 +176,8 @@
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
             DGW_Main.DefaultCellStyle = dataGridViewCellStyle5;
             DGW_Main.EnableHeadersVisualStyles = false;
-            DGW_Main.GridColor = SystemColors.ButtonFace;
-            DGW_Main.Location = new Point(293, -1);
+            DGW_Main.GridColor = SystemColors.AppWorkspace;
+            DGW_Main.Location = new Point(293, 15);
             DGW_Main.Name = "DGW_Main";
             DGW_Main.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -193,7 +195,7 @@
             DGW_Main.RowTemplate.DefaultCellStyle.SelectionForeColor = Color.Yellow;
             DGW_Main.RowTemplate.Height = 29;
             DGW_Main.RowTemplate.ReadOnly = true;
-            DGW_Main.Size = new Size(468, 657);
+            DGW_Main.Size = new Size(468, 649);
             DGW_Main.TabIndex = 5;
             // 
             // dBAdressDataGridViewTextBoxColumn
@@ -266,9 +268,9 @@
             panel1.Controls.Add(Button_DisconnectPLC);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(Button_ConnectPLC);
-            panel1.Location = new Point(0, -1);
+            panel1.Location = new Point(0, 15);
             panel1.Name = "panel1";
-            panel1.Size = new Size(296, 353);
+            panel1.Size = new Size(296, 337);
             panel1.TabIndex = 6;
             // 
             // Label_PLC_Conn
@@ -328,6 +330,7 @@
             // 
             panel2.BackColor = Color.FromArgb(64, 64, 64);
             panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(progressBar1);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(button2);
@@ -336,18 +339,38 @@
             panel2.Size = new Size(296, 361);
             panel2.TabIndex = 7;
             // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(37, 254);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(217, 16);
+            progressBar1.Style = ProgressBarStyle.Continuous;
+            progressBar1.TabIndex = 6;
+            progressBar1.Value = 45;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(760, 24);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
+            // 
             // Main_form
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(757, 638);
+            ClientSize = new Size(760, 643);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(DGW_Main);
+            Controls.Add(menuStrip1);
             Font = new Font("Microsoft Tai Le", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = SystemColors.MenuHighlight;
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 4, 3, 4);
             Name = "Main_form";
             Text = "TMS Reader";
@@ -359,6 +382,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -384,5 +408,7 @@
         private DataGridViewTextBoxColumn contentDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn purposeDataGridViewTextBoxColumn;
+        private ProgressBar progressBar1;
+        private MenuStrip menuStrip1;
     }
 }
