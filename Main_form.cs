@@ -244,13 +244,6 @@ namespace EngineNum_match_validator
             //textBox1.Text = "TIMER STOPPED!";
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            var plc_dbs = this.PLC_DBs;
-            DGW_Main.DataSource = plc_dbs;
-
-        }
-
         private void bt_testeLOG_Click_1(object sender, EventArgs e)
         {
             my_logger.Log("log test pressed");
@@ -261,5 +254,20 @@ namespace EngineNum_match_validator
 
         }
 
+        private void Main_form_Load(object sender, EventArgs e)
+        {
+            var plc_dbs = this.PLC_DBs;
+            DGW_Main.DataSource = plc_dbs;
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Label_PLC_Conn.BackColor = Color.Black;
+        }
+
+        private void infoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Label_PLC_Conn.BackColor = Color.Black;
+        }
     }
 }
